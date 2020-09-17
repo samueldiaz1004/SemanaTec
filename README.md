@@ -1,28 +1,16 @@
 # Semana Tec: El arte de programar
-Herramientas Computacionales
+## Proyecto Evidencia: Deteccion de contornos en Python con OpenCV
+Se presenta una aplicacion de la funcion de convolucion para aplicar diferentes filtros, destacando el contorno de bordes, en la camara de video. 
 
-Este archivo contiene informacion acerca de los estandares que se aplican actualmente en programacion utilizando git.
-### Buenas practicas en programacion
-  - Indentación apropiada
-  - Asignar un nombre al programa y variables adecuados 
-  - Uso correcto de corchetes y llaves en condicionales, bucles y estructuras de control
-  - Espaciado  
-  Ejemplo de:  
-  `int cuenta; for(cuenta=0;cuenta<10;cuenta++){printf("%d",cuenta*cuenta+cuenta);}`  
-  A:  
-   ~~~
-   int cuenta;
-   for (cuenta = 0; cuenta < 10; cuenta++)
-   {
-      printf("%d", cuenta * cuenta + cuenta);
-   }
-   ~~~
- 
+### Requerimientos 
+Se necesita instalar:
+- Python 3
+- OpenCV
 
-### Buenas practicas en Git
-  - Realiza commits cortos y sencillos
-  - Evita subir commits incompletos
-  - Checa tus commits antes de subirlos y asegurate que funcionen bien
-  - Escribe mensajes claros y concisos: explicar contexto ![Ejemlo](https://programacionmaster.files.wordpress.com/2018/01/buenas-practicas-git-comentario.png)
-  - Haz commits con mas frecuencia 
-  - Sigue el GitFlow Workflow ![Imagen](http://i.stack.imgur.com/TBHkD.png)
+### Material 
+
+### Uso
+
+#### Ejemplo
+Para el desarrollo de esta evidencia nos apoyamos en el siguiente archivo de video:  
+[Link : Loading Video Source](https://www.youtube.com/watch?v=Jvf5y21ZqtQ&t=333s)
