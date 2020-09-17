@@ -28,12 +28,6 @@ def sobel_y(pad): #Sobel en y
     sum += np.sum(pad[2]*[-1,-2,-1])
     return sum
 
-def convolucion (image) #Funcion de convolucion
-    filtro = [ [ -1.0, 0.0, 1.0 ],[ -1.0, 0.0, 1.0 ],[ -1.0, 0.0, 1.0 ] ]
-    kernel = np.asarray(filtro)
-    dst = cv2.filter2D(image, -1, kernel)
-    print(dst.min(), dst.max())
-
 ######################################
 ### MAIN
 ######################################
