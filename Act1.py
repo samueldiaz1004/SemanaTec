@@ -32,54 +32,35 @@ def sobel_y(pad): #Sobel en y
 ### MAIN
 ######################################
 
-###Guardar y leer la imagen como cv2
-img = "/home/pedros/Documents/Jackie/yop.jpeg"
+### Guardar y leer la imagen como cv2
+img = "/home/jack/Documents/ulises.jpeg"
 image = cv2.imread(img)
 
-###Revisar que la imagen sea a blanco y negro
+### Revisar que la imagen sea a blanco y negro
 if len(image.shape) == 3: #si la imagen es de color (3 dimensiones)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) #cambiar a blanco y negro (2 dimensiones)
 
 img_row, img_col = image.shape
-print(image)
 
-convolution = np.zeros(image.shape) #numpy array con zeros del mismo tamano de la imagen para almacenar los resultados
+### Numpy array con zeros del mismo tamano de la imagen para almacenar los resultados
+convolution1 = np.zeros(image.shape)
+convolution2 = np.zeros(image.shape)
+convolution3 = np.zeros(image.shape)
+convolution4 = np.zeros(image.shape)
 
-###Modificar imagen con el kernel (Prewitt en y)
+### Modificar imagen con el kernel (Prewitt en y)
 for i in range(img_row-3):
     for j in range(img_col-3):
-        convolution[i][j] = prewitt_y(image[i:(i+3), j:(j+3)])
-###Graficar y mostrar la imagen
-plt.imshow(convolution, cmap='gray')
-plt.title("Output Image using Prewitt in y")
-plt.show()
+        convolution1[i][j] = prewitt_x(image[i:(i+3), j:(j+3)])
+        convolution2[i][j] = prewitt_y(image[i:(i+3), j:(j+3)])
+        convolution3[i][j] = sobel_x(image[i:(i+3), j:(j+3)])
+        convolution4[i][j] = sobel_y(image[i:(i+3), j:(j+3)])
 
-
-###Modificar imagen con el kernel (Prewitt en x)
-for i in range(img_row-3):
-    for j in range(img_col-3):
-        convolution[i][j] = prewitt_x(image[i:(i+3), j:(j+3)])
-###Graficar y mostrar la imagen
-plt.imshow(convolution, cmap='gray')
-plt.title("Output Image using Prewitt in x")
-plt.show()
-
-
-###Modificar imagen con el kernel (Sobel en x)
-for i in range(img_row-3):
-    for j in range(img_col-3):
-        convolution[i][j] = sobel_x(image[i:(i+3), j:(j+3)])
-###Graficar y mostrar la imagen
-plt.imshow(convolution, cmap='gray')
-plt.title("Output Image using Sobel in x")
-plt.show()
-
-
-###Modificar imagen con el kernel (Sobel en y)
-for i in range(img_row-3):
-    for j in range(img_col-3):
-        convolution[i][j] = sobel_y(image[i:(i+3), j:(j+3)])
-###Graficar y mostrar la imagen
-plt.imshow(convolution, cmap='gray')
-plt.title("Output Image using Sobel in y")
-plt.show()
+### Graficar y mostrar la imagen
+cv2.imshow("Prewitt en x", convolution1)
+cv2.imshow("Prewitt en y", convolution2)
+cv2.imshow("Sobel en x", convolution3)
+cv2.imshow("Sobel en y", convolution4)
+cv2.waitKey(0)
+image.release()
+cv2.destroyAllWindows()
