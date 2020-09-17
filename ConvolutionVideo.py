@@ -1,3 +1,16 @@
+'''
+Evidencia Final
+
+Colaboradores:
+César Ivann Llamas Macías
+Lizbeth Maribel Meléndez Delgado
+Luis Humberto Sánchez Vaca
+Mónica Jaqueline Íñiguez Moncada
+Samuel Alejandro Díaz del Guante Ochoa
+
+Creacion: 16/09/2020
+Ultima modificacion: 17/09/2020
+'''
 import cv2
 import numpy as np
 
@@ -6,7 +19,6 @@ cap = cv2.VideoCapture(0)
 # Codec; parametro necesario para output de video
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 # Output de video (Nombre de archivo, codec, fps, tamaño de ventana)
-# Por el momento solo funciona con ese fps y tamaño
 out = cv2.VideoWriter('ConvolutionVideoPrueba.mp4',fourcc, 20.0, (640,480))
 operation = True
 
