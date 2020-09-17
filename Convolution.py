@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-imOrigin = cv2.imread("Catedral.jpg")
+imOrigin = cv2.imread("Euros.jpg")
 cv2.imshow("Original", imOrigin)
 #Se cambia el color a gris
 grey = cv2.cvtColor(imOrigin,cv2.COLOR_BGR2GRAY)
