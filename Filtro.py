@@ -10,4 +10,17 @@ while True:
     kernel1 = np.array([-0.5,0,0.5])
     kernel2 = np.array([[-0.5],[0],0.5])
     Hsx = np.array([[-1,0,1],[-2,0,2],[-1,0,1]])
-    bordex = cv2.filter2D(frame_float)
+    Hsy = np.transpose(Hsx)
+    bordex = cv2.filter2D(frame_float,-1,kernel1)
+    dordey = csv.filter2D(frame_float,-1,kernel2)
+    Mxy = bordex**2+bordey**2
+    Mxy = np.sqrt(Mxy)
+    Mxy = Mxy/np.max(Mxy)
+    mask = np.where(Mxy>0.1,255,0)
+    cv2.imshow('Bordes',mask)
+    k = cv2.waitKey(1)&0xFF
+    if (k == ord('p')):
+        print('EL programa ha acabado')
+        break
+video.release()
+cv2.destroyAllWindows()
