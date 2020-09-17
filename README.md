@@ -14,6 +14,3 @@ Se necesita instalar:
 #### Ejemplo
 Para el desarrollo de esta evidencia nos apoyamos en el siguiente archivo de video:  
 [Link : Loading Video Source](https://www.youtube.com/watch?v=Jvf5y21ZqtQ&t=333s)
-
-
-
