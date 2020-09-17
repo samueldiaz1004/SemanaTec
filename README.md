@@ -6,9 +6,10 @@ Se presenta una aplicacion de la funcion de convolucion para aplicar diferentes 
 Se necesita instalar:
 - Python 3
 - OpenCV
+Opcional: Matplotlib (forma alterna de mostrar las imagenes)
 
 ### Material 
-Se encuentran dos archivos codigo en python y un video mp4:
+Se encuentran los archivos de codigo en python y un video mp4 utlizado en el mismo para las pruebas:
 - ConvolutionVideo_Samuel.py : codigo para la implementacion del proyecto, se encarga de abrir la camara de video, aplicar los filtros de escala de grises, gauss y canny para enseguida detectar los contornos y guardar el archivo de video en un archivo.mp4
 - ConvolutionVideoPrueba.mp4 : se muestra un resultado final de la ejecucion del codigo
 
