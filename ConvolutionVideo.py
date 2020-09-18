@@ -52,8 +52,8 @@ if __name__ == '__main__':
 
         # Fin de ciclo si se presiona ESCAPE
         key = cv2.waitKey(1)
-	if key == 27:
-            operation = False
+        if key == 27:
+                operation = False
 
     # Cerrar captura de video
     cap.release()
