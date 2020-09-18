@@ -50,8 +50,9 @@ if __name__ == '__main__':
         # Muestra de video con filtros en tiempo real
         cv2.imshow("Contornos",frame)
 
-        # Fin de ciclo si se presiona SPACEBAR
-        if cv2.waitKey(1) & 0xFF == ord('p'):
+        # Fin de ciclo si se presiona ESCAPE
+        key = cv2.waitKey(1)
+	if key == 27:
             operation = False
 
     # Cerrar captura de video
