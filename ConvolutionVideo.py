@@ -11,7 +11,7 @@ Samuel Alejandro Díaz del Guante Ochoa
 Creacion: 16/09/2020
 Ultima modificacion: 17/09/2020
 """
-
+#importacion de la libreria Open CV para poder usar algunas funciones
 import cv2
 
 
@@ -32,9 +32,14 @@ if __name__ == '__main__':
 
         # Aplicacion de filtros sobre un mismo frame
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        #Creacion de la campana Gaussiana
         gauss = cv2.GaussianBlur(gray, (5,5),0)
+        #Algoritmo de canny
         canny = cv2.Canny(gauss,50,150)
+        #esta funcion hace que se resalte los bordes con color
         (contornos,_) = cv2.findContours(canny.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        #Asignacion de color a los contornos en este caso de usar 
+        #RGB para seleccionar el color rojo
         cv2.drawContours(frame,contornos,-1,(0,0,255), 2)
 
         # Frame guardado en archivo output
