@@ -23,7 +23,8 @@ if __name__ == '__main__':
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
 
     # Output de video (Nombre de archivo, codec, fps, tamaño de ventana)
-    out = cv2.VideoWriter('ConvolutionVideoPrueba.mp4',fourcc, 20.0, (640,480))
+    out = cv2.VideoWriter('ConvolutionVideoPrueba.mp4',
+                        fourcc, 20.0, (640,480))
 
     operation = True
     while operation:
@@ -37,7 +38,8 @@ if __name__ == '__main__':
         #Algoritmo de canny
         canny = cv2.Canny(gauss,50,150)
         #esta funcion hace que se resalte los bordes con color
-        (contornos,_) = cv2.findContours(canny.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        (contornos,_) = cv2.findContours(canny.copy(), cv2.RETR_EXTERNAL, 
+                                        cv2.CHAIN_APPROX_SIMPLE)
         #Asignacion de color a los contornos en este caso de usar 
         #RGB para seleccionar el color rojo
         cv2.drawContours(frame,contornos,-1,(0,0,255), 2)
@@ -49,7 +51,7 @@ if __name__ == '__main__':
         cv2.imshow("Contornos",frame)
 
         # Fin de ciclo si se presiona SPACEBAR
-        if cv2.waitKey(1) & 0xFF == ord(' '):
+        if cv2.waitKey(1) & 0xFF == ord('p'):
             operation = False
 
     # Cerrar captura de video
