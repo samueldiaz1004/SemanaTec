@@ -9,9 +9,8 @@ Se necesita instalar:
 Opcional: Matplotlib (forma alterna de mostrar las imagenes)
 
 ### Material 
-Se encuentran los archivos de codigo en python y un video mp4 utlizado en el mismo para las pruebas:
+Se encuentran los archivos de codigo en python:
 - ConvolutionVideo.py : codigo para la implementacion del proyecto, se encarga de abrir la camara de video, aplicar los filtros de escala de grises, gauss y canny para enseguida detectar los contornos y guardar el archivo de video en un archivo.mp4
-- ConvolutionVideoPrueba.mp4 : se muestra un resultado final de la ejecucion del codigo
 
 ### Ejecucion. 
 Se puede correr desde la linea de comando  
@@ -20,4 +19,4 @@ Y como resultado se puede observar la deteccion de contornos en rojo del objeto 
 ![Imagen](https://programarfacil.com/wp-content/uploads/2017/04/contornos-opencv.jpg)
 
 Para el desarrollo de esta evidencia nos apoyamos en el siguiente archivo de video:  
-[Link : Loading Video Source](https://www.youtube.com/watch?v=Jvf5y21ZqtQ&t=333s)
+[Link](https://www.youtube.com/watch?v=Jvf5y21ZqtQ&t=333s)
